@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/calc.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Calculator App</h1>
+			<div class="form-group">
+				<div class="form-inline">
+					<label for="x">X</label><span style="width:20px;"></span>
+					<input type="number" id="x" placeholder="first operand" class="form-control"/>
+				</div>
+				<br />
+				<div class="form-inline">
+					<label for="y">Y</label><span style="width:20px;"></span>
+					<input type="number" id="y" placeholder="second operand" class="form-control" />
+				</div>
+				<br />
+				<div class="form-inline">
+					<span class="btn btn-primary" id="mul" onClick="mult()">x</span><span style="width:20px;"></span>
+					<span class="btn btn-primary" id="div" onClick="divide()">/</span><span style="width:20px;"></span>
+					<span class="btn btn-primary" id="add" onClick="plus()">+</span><span style="width:20px;"></span>
+					<span class="btn btn-primary" id="sub" onClick="subtract()">-</span><span style="width:20px;"></span>
+					<span class="btn btn-primary" id="pow" onClick="power()">^</span><span style="width:20px;"></span>
+					<div class="checkbox">
+						<label><input type="checkbox" id="def" value="default" /> Make default?</label>
+					</div>
+					<!--Begin the pull right class of the form-inline -->
+					<div class="pull-right">
+						<select class="form-control" name="hash-list" id="hashes">
+							<option value="sha1">SHA1</option>
+							<option value="md5">MD5</option>
+							<option value="sha-256">SHA256</option>
+							<option value="sha-512">SHA512</option>
+						</select>
+					</div>
+					<!--End pull right section-->
+				</div>
+			</div>
+			<div class="well well-sm" id="operationWell">
+			</div><br />
+			<div class="well well-sm" id="hashWell">
+			</div>
+		</div>
+	</body>
+</html>
